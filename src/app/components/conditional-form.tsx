@@ -23,6 +23,7 @@ import {
   BuildingIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { uploadToCloudinary, sendEmail } from "@/app/lib/email";
 
 type ServiceType = "installation" | "depannage" | "autres" | null;
 type ClientType = "particulier" | "entreprise" | null;
@@ -40,7 +41,6 @@ interface FormData {
   vehicleModel: string;
   projetPhotovoltaique: boolean;
   forfaitEnergie: string;
-  consommation: string;
   puissanceMax: string;
   adresse: string;
   nom: string;
@@ -63,7 +63,6 @@ export default function ConditionalForm() {
     vehicleModel: "",
     projetPhotovoltaique: false,
     forfaitEnergie: "",
-    consommation: "",
     puissanceMax: "",
     adresse: "",
     nom: "",
@@ -100,6 +99,13 @@ export default function ConditionalForm() {
     consoleCompteur: null,
     complementaires: null,
   });
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [success, setSuccess] = useState(false);
 
   // Déterminer le nombre total d'étapes en fonction des choix
   useEffect(() => {
@@ -182,22 +188,71 @@ export default function ConditionalForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Ici vous traiteriez l'envoi du formulaire
-    console.log("Form data:", formData);
-    console.log("Uploaded images:", uploadedImages);
+    setIsSubmitting(true);
+    setError(null);
 
-    toast.success("Demande envoyée avec succès", {
-      description:
-        "Nous vous contacterons rapidement pour traiter votre demande.",
-      duration: 2000,
-    });
+    try {
+      // Upload des images vers Cloudinary
+      const uploadedUrls: Record<string, string[]> = {};
+      for (const [key, files] of Object.entries(uploadedImages)) {
+        if (files && files.length > 0) {
+          uploadedUrls[key] = await Promise.all(
+            files.map((file) => uploadToCloudinary(file))
+          );
+        }
+      }
 
-    // Rafraîchir la page après 2 secondes
-    setTimeout(() => {
-      window.location.reload();
-    }, 2000);
+      // Envoi de l'email avec EmailJS
+      console.log("uploadedUrls :", uploadedUrls);
+      await sendEmail(formData, uploadedUrls);
+
+      // Réinitialisation du formulaire
+      setFormData({
+        serviceType: null,
+        clientType: null,
+        residenceType: null,
+        borneFournie: null,
+        cableLongueur: "",
+        electricalType: null,
+        vehicleModel: "",
+        projetPhotovoltaique: false,
+        forfaitEnergie: "",
+
+        puissanceMax: "",
+        adresse: "",
+        nom: "",
+        prenom: "",
+        email: "",
+        telephone: "",
+        descriptionPanne: "",
+      });
+      setUploadedImages({
+        tableauElectrique: null,
+        disjoncteurAbonne: null,
+        murBorne: null,
+        consoleCompteur: null,
+        complementaires: null,
+      });
+      setCurrentStep(0);
+      setSuccess(true);
+
+      // Notification de succès
+      toast.success("Votre demande a été envoyée avec succès !");
+      setTimeout(() => window.location.reload(), 1500);
+    } catch (err) {
+      setError(
+        "Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer."
+      );
+      console.error(err);
+      // Notification d'erreur
+      toast.error(
+        "Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Composant pour afficher les aperçus d'images
@@ -863,7 +918,7 @@ export default function ConditionalForm() {
                 votre compteur Linky)
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 gap-4 mb-6">
                 <div>
                   <Label
                     htmlFor="forfaitEnergie"
@@ -877,24 +932,7 @@ export default function ConditionalForm() {
                     name="forfaitEnergie"
                     value={formData.forfaitEnergie}
                     onChange={handleInputChange}
-                    placeholder="Ex: 9 kVA"
-                    className="w-full"
-                  />
-                </div>
-                <div>
-                  <Label
-                    htmlFor="consommation"
-                    className="block text-gray-700 mb-2"
-                  >
-                    Consommation moyenne (kWh/an)
-                  </Label>
-                  <Input
-                    type="text"
-                    id="consommation"
-                    name="consommation"
-                    value={formData.consommation}
-                    onChange={handleInputChange}
-                    placeholder="Ex: 4500 kWh/an"
+                    placeholder="Ex: 9, 12, 15kVA"
                     className="w-full"
                   />
                 </div>
@@ -937,7 +975,6 @@ export default function ConditionalForm() {
                   onClick={nextStep}
                   disabled={
                     !formData.forfaitEnergie ||
-                    !formData.consommation ||
                     !formData.puissanceMax ||
                     !uploadedImages.consoleCompteur ||
                     uploadedImages.consoleCompteur.length < 2
