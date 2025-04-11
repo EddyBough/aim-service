@@ -14,20 +14,24 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-32 relative">
           {/* Logo seul à gauche (mobile/tablette) */}
-          <div className="xl:hidden w-20 h-20 flex-shrink-0">
-            <Image
-              src="/img/logo-aim-services.svg"
-              alt="Logo AIM"
-              width={75}
-              height={75}
-              className="object-contain"
-            />
-          </div>
+          <Link href="/">
+            <div className="xl:hidden w-20 h-20 flex-shrink-0">
+              <Image
+                src="/img/logo-aim-services.svg"
+                alt="Logo AIM"
+                width={75}
+                height={75}
+                className="object-contain"
+              />
+            </div>
+          </Link>
 
           {/* Texte AIM SERVICES centré (mobile/tablette) */}
           <div className="xl:hidden absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center text-center">
-            <span className="text-xl font-bold text-[#FFD700]">AIM</span>
-            <span className="text-sm text-[#FFD700]">SERVICES</span>
+            <span className="text-xl font-extrabold text-[#FFD700]">AIM</span>
+            <span className="text-sm font-extralight text-[#FFD700]">
+              SERVICES
+            </span>
           </div>
 
           {/* Logo + texte (desktop uniquement) */}
@@ -104,7 +108,7 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-12 w-12 mr-3" />
             ) : (
               <Menu className="h-12 w-12 text-[#FFD700] mr-3" />
             )}
