@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
@@ -53,6 +53,8 @@ interface FormData {
 export default function ConditionalForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [totalSteps, setTotalSteps] = useState(1);
+  const formRef = useRef<HTMLDivElement | null>(null);
+
   const [formData, setFormData] = useState<FormData>({
     serviceType: null,
     clientType: null,
@@ -177,14 +179,14 @@ export default function ConditionalForm() {
   const nextStep = () => {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
-      window.scrollTo(0, 0);
+      formRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const prevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
-      window.scrollTo(0, 0);
+      formRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
