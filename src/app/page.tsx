@@ -1,11 +1,13 @@
 import ConditionalForm from "./components/conditional-form";
 import Hero from "./components/hero-section";
+import ServicesSection from "./components/service-section";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <section>
         <Hero />
+        <ServicesSection />
       </section>
       <section id="formulaire" className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">

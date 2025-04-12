@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white sticky top-0 z-50">
+    <header className="bg-black text-white top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-32 relative">
           {/* Logo seul à gauche (mobile/tablette) */}
