@@ -401,7 +401,7 @@ export default function ConditionalForm() {
                 />
                 <h3 className="text-lg font-semibold mb-2">Dépannage</h3>
                 <p className="text-sm text-gray-500">
-                  Résolution de problèmes sur votre borne existante
+                  Résolution de problèmes sur votre installation existante
                 </p>
               </div>
 
@@ -601,7 +601,7 @@ export default function ConditionalForm() {
               </h3>
               <p className="text-sm text-red-500 mb-4">
                 <Info className="h-4 w-4 inline mr-1" />
-                Attention : la borne n&apos;est pas garanti si la borne est
+                Attention : le matériel n&apos;est pas garanti si la borne est
                 fournie par le concessionnaire.
               </p>
 

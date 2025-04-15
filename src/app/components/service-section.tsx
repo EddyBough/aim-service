@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Zap, Shield, Clock } from "lucide-react";
+import { Zap, Wrench, Recycle } from "lucide-react";
 
 export default function ServicesSection() {
   return (
@@ -49,12 +49,12 @@ export default function ServicesSection() {
             description="Installation professionnelle de bornes de recharge pour particuliers et entreprises."
           />
           <ServiceCard
-            icon={<Shield className="h-8 w-8 text-black" />}
+            icon={<Recycle className="h-8 w-8 text-black" />}
             title="Maintenance IRVE & SAV"
             description="Service de maintenance et dépannage pour assurer la fiabilité de vos équipements."
           />
           <ServiceCard
-            icon={<Clock className="h-8 w-8 text-black" />}
+            icon={<Wrench className="h-8 w-8 text-black" />}
             title="Dépannage & Autres travaux électriques"
             description="Travaux divers, accompagnement personnalisé, étude technique et dépannage sur vos installations électriques."
           />
@@ -95,7 +95,6 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
       className={`bg-black rounded-lg p-8 text-white shadow-xl group relative overflow-hidden transition-all duration-700 ease-in-out transform 
       ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
     >
-      {/* Décor animé */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-[#FFD700] rounded-bl-full transform translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
 
       <div className="bg-[#FFD700] rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
