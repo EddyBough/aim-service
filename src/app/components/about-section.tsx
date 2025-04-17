@@ -129,9 +129,9 @@ export default function AboutSection() {
                     <Award className="w-4 h-4 mr-2" /> Marques & clients
                   </h3>
                   <p className="text-sm text-gray-300">
-                    Wallbox, Schneider, Hager, ABB, Legrand, Autel...
-                    TotalEnergies, Izivia, IZI by EDF, SNEF, Dalkia, ChargeGuru,
-                    WAAT...
+                    Wallbox, Schneider, Hager, ABB, Legrand, BEEV, DAZE,
+                    Autel... TotalEnergies, Izivia, IZI by EDF, SNEF, Dalkia,
+                    ChargeGuru, WAAT...
                   </p>
                 </div>
               </div>

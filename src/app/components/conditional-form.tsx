@@ -945,7 +945,7 @@ export default function ConditionalForm() {
                   htmlFor="puissanceMax"
                   className="block text-gray-700 mb-2"
                 >
-                  Puissance maximale soutirée (kW)
+                  Puissance maximale soutirée (vA)
                 </Label>
                 <Input
                   type="text"
