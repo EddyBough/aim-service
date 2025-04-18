@@ -3,6 +3,7 @@ import ConditionalForm from "./components/conditional-form";
 import Hero from "./components/hero-section";
 import InstallationsSection from "./components/installation-section";
 import ServicesSection from "./components/service-section";
+import TestimonialsSection from "./components/testimonials-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <ServicesSection />
         <AboutSection />
         <InstallationsSection />
+        <TestimonialsSection />
       </section>
       <section id="formulaire" className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">

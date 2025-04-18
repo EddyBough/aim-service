@@ -65,7 +65,7 @@ export default function HeroSection() {
 
       {/* Contenu principal */}
       <div className="relative z-10 px-4 mx-auto">
-        <div className="flex flex-col items-center pt-32 pb-16 md:pt-40 md:pb-24">
+        <div className="flex flex-col items-center pt-20 pb-16 md:pt-32 md:pb-24">
           {/* Badge supérieur */}
           <div className="w-full flex justify-center items-center mb-8">
             <div
@@ -134,7 +134,7 @@ export default function HeroSection() {
 
         {/* Image et statistiques */}
         <div
-          className={`relative flex flex-col items-center mb-16 md:flex-row transition-all duration-1000 ${
+          className={`relative flex flex-col items-center mb-16 xl:flex-row transition-all duration-1000 ${
             isLoaded ? "opacity-100" : "opacity-0 translate-y-4"
           }`}
           style={{ transitionDelay: "0.8s" }}
