@@ -1,5 +1,6 @@
 import AboutSection from "./components/about-section";
 import ConditionalForm from "./components/conditional-form";
+import FooterSection from "./components/footer";
 import Hero from "./components/hero-section";
 import InstallationsSection from "./components/installation-section";
 import ServicesSection from "./components/service-section";
@@ -31,6 +32,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FooterSection />
     </div>
   );
 }
