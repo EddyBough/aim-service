@@ -175,7 +175,7 @@ export default function AboutSection() {
             </div>
 
             {/* Logos certifs */}
-            <div className="flex flex-wrap justify-center items-center gap-6 mt-6">
+            <div className="flex flex-wrap justify-center items-center gap-20 mt-6">
               <div className="relative w-[120px] h-[60px]">
                 <Image
                   src="/img/logo-advenir.png"
