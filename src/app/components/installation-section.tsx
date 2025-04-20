@@ -19,9 +19,9 @@ export default function InstallationsSection() {
   const installations: Installation[] = [
     { id: 1, image: "/img/picture-first.png" },
     { id: 2, image: "/img/picture-second.png" },
-    { id: 3, image: "/img/picture-third.png" },
+    { id: 3, image: "/img/photothird.jpeg" },
     { id: 4, image: "/img/picture-one.png" },
-    { id: 5, image: "/img/picture-two.png" },
+    { id: 5, image: "/img/picture-two.jpeg" },
     { id: 6, image: "/img/picture-three.png" },
     { id: 7, image: "/img/picture-four.png" },
     { id: 8, image: "/img/picture-five.png" },
@@ -135,13 +135,14 @@ export default function InstallationsSection() {
               >
                 <div className="relative overflow-hidden rounded-xl group">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative h-[400px] md:h-[600px] w-full">
+                  <div className="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden">
                     <Image
                       src={installation.image}
                       alt="Installation"
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-contain transition-transform duration-700 group-hover:scale-105"
                     />
+
                     <button
                       onClick={() => openFullscreen(installation)}
                       className="absolute z-10 p-2 bg-black/50 rounded-full top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
