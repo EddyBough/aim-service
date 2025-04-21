@@ -35,14 +35,14 @@ export default function Navbar() {
           </div>
 
           {/* Logo + texte (desktop uniquement) */}
-          <Link href="/" className="hidden xl:flex items-center">
+          <Link href="/" className="hidden xl:flex items-center w-[340px]">
             <div className="w-24 h-24 mr-4 flex-shrink-0">
               <Image
                 src="/img/logo-aim-services.svg"
                 alt="AIM SERVICES Logo"
                 width={96}
                 height={96}
-                className="object-contain"
+                className="object-contain xl:mr-96"
               />
             </div>
             <div className="flex flex-col">
@@ -88,7 +88,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA Buttons (desktop uniquement) */}
-          <div className="hidden xl:flex items-center space-x-2">
+          <div className="hidden xl:flex items-center space-x-2 justify-end w-[340px] xl:mr-7">
             <Link href="#formulaire">
               <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold">
                 Devis en ligne
