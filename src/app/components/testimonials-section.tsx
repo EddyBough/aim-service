@@ -210,7 +210,7 @@ export default function TestimonialsSection() {
                       </p>
                     </div>
 
-                    {/* Informations sur le client - réorganisées pour mobile */}
+                    {/* Informations sur le client */}
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-4 border-t border-gray-200">
                       <div className="flex items-center mb-4 sm:mb-0">
                         <div className="relative w-10 h-10 md:w-12 md:h-12 mr-3 md:mr-4 overflow-hidden rounded-full bg-[#FFD700]/20">
@@ -265,7 +265,7 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Boutons précédent/suivant - agrandis pour mobile */}
+          {/* Boutons précédent/suivant */}
           <button
             onClick={prevTestimonial}
             className="absolute left-1 md:left-4 z-10 p-2 md:p-3 -translate-y-1/2 bg-white rounded-full shadow-md top-1/2 hover:bg-gray-100 transition-all hidden xl:block"
@@ -282,7 +282,7 @@ export default function TestimonialsSection() {
           </button>
         </div>
 
-        {/* Statistiques en ligne - réorganisées pour mobile */}
+        {/* Statistiques en ligne */}
         <div
           className={`flex flex-wrap justify-center gap-4 md:gap-8 mt-8 md:mt-12 transition-all duration-1000 ${
             isVisible ? "opacity-100" : "opacity-0 translate-y-4"

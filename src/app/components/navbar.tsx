@@ -56,16 +56,16 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-12 text-[18px]">
             <Link
-              href="#borne-de-recharge"
-              className="text-white hover:text-[#FFD700] transition-colors"
-            >
-              Borne de recharge
-            </Link>
-            <Link
               href="#nos-services"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               Nos services
+            </Link>
+            <Link
+              href="#demo"
+              className="text-white hover:text-[#FFD700] transition-colors"
+            >
+              Démonstration
             </Link>
             <Link
               href="#installation-client"
@@ -122,18 +122,17 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col items-center space-y-4 text-center">
               <Link
-                href="#borne-de-recharge"
-                className="text-white hover:text-[#FFD700] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Borne de recharge
-              </Link>
-              <Link
                 href="#nos-services"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Nos services
+              </Link>
+              <Link
+                href="#demo"
+                className="text-white hover:text-[#FFD700] transition-colors"
+              >
+                Démonstration
               </Link>
               <Link
                 href="#installation-client"

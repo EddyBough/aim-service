@@ -6,6 +6,7 @@ import Hero from "./components/hero-section";
 import InstallationsSection from "./components/installation-section";
 import ServicesSection from "./components/service-section";
 import TestimonialsSection from "./components/testimonials-section";
+import ClientVideoSection from "./components/video-section";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <section>
         <Hero />
         <ServicesSection />
+        <ClientVideoSection />
         <AboutSection />
         <InstallationsSection />
         <TestimonialsSection />
