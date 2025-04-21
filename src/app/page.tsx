@@ -1,5 +1,6 @@
 import AboutSection from "./components/about-section";
 import ConditionalForm from "./components/conditional-form";
+import FAQSection from "./components/faq-section";
 import FooterSection from "./components/footer";
 import Hero from "./components/hero-section";
 import InstallationsSection from "./components/installation-section";
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutSection />
         <InstallationsSection />
         <TestimonialsSection />
+        <FAQSection />
       </section>
       <section id="formulaire" className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
