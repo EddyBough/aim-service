@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="bg-black text-white top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-32 relative">
+        <div className="flex items-center justify-between h-32 relative xl:mr-16">
           {/* Logo seul à gauche (mobile/tablette) */}
           <Link href="/">
             <div className="xl:hidden w-20 h-20 flex-shrink-0">
@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
 
           {/* Logo + texte (desktop uniquement) */}
-          <Link href="/" className="hidden xl:flex items-center w-[340px]">
+          <Link href="/" className="hidden xl:flex items-center w-[200px]">
             <div className="w-24 h-24 mr-4 flex-shrink-0">
               <Image
                 src="/img/logo-aim-services.svg"
@@ -88,7 +88,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA Buttons (desktop uniquement) */}
-          <div className="hidden xl:flex items-center space-x-2 justify-end w-[340px] xl:mr-7">
+          <div className="hidden xl:flex items-center space-x-2 justify-end w-[200px] xl:mr-7">
             <Link href="#formulaire">
               <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold">
                 Devis en ligne
