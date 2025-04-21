@@ -18,22 +18,22 @@ export default function FooterSection() {
   const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      });
-    });
+    const sectionEl = footerRef.current;
 
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
+    if (sectionEl) observer.observe(sectionEl);
     return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
-      }
+      if (sectionEl) observer.unobserve(sectionEl);
     };
   }, []);
 
@@ -270,14 +270,14 @@ export default function FooterSection() {
               <span className="absolute left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-12 h-0.5 -bottom-2 bg-[#FFD700]"></span>
             </h4>
             <ul className="space-y-3 flex flex-col items-center md:items-start">
-              <FooterLink href="/borne-de-recharge" label="Borne de recharge" />
-              <FooterLink href="/nos-services" label="Nos services" />
+              <FooterLink href="#borne-de-recharge" label="Borne de recharge" />
+              <FooterLink href="#nos-services" label="Nos services" />
               <FooterLink
-                href="/installation-client"
+                href="#installation-client"
                 label="Installation client"
               />
-              <FooterLink href="/a-propos" label="À propos" />
-              <FooterLink href="/contact" label="Contact" />
+              <FooterLink href="#a-propos" label="À propos" />
+              <FooterLink href="#formulaire" label="Contact" />
             </ul>
           </div>
 

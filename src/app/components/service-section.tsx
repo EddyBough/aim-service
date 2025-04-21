@@ -6,6 +6,7 @@ import { Zap, Wrench, Recycle } from "lucide-react";
 export default function ServicesSection() {
   return (
     <section
+      id="nos-services"
       className="bg-[#FFD700] py-20 relative overflow-hidden"
       aria-labelledby="services-heading"
     >

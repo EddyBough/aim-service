@@ -56,31 +56,31 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-12 text-[18px]">
             <Link
-              href="/borne-de-recharge"
+              href="#borne-de-recharge"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               Borne de recharge
             </Link>
             <Link
-              href="/nos-services"
+              href="#nos-services"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               Nos services
             </Link>
             <Link
-              href="/installation-client"
+              href="#installation-client"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               Installation client
             </Link>
             <Link
-              href="/a-propos"
+              href="#a-propos"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               À propos
             </Link>
             <Link
-              href="/contact"
+              href="#formulaire"
               className="text-white hover:text-[#FFD700] transition-colors"
             >
               Contact
@@ -89,13 +89,13 @@ export default function Navbar() {
 
           {/* CTA Buttons (desktop uniquement) */}
           <div className="hidden xl:flex items-center space-x-2">
-            <Link href="/devis">
+            <Link href="#formulaire">
               <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold">
                 Devis en ligne
               </Button>
             </Link>
             <Link
-              href="/contact"
+              href="mailto:aim_services@hotmail.com"
               className="bg-[#FFD700] p-2 rounded-md flex items-center justify-center"
             >
               <Mail className="h-5 w-5 text-black" />
@@ -122,47 +122,47 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col items-center space-y-4 text-center">
               <Link
-                href="/borne-de-recharge"
+                href="#borne-de-recharge"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Borne de recharge
               </Link>
               <Link
-                href="/nos-services"
+                href="#nos-services"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Nos services
               </Link>
               <Link
-                href="/installation-client"
+                href="#installation-client"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Installation client
               </Link>
               <Link
-                href="/a-propos"
+                href="#a-propos"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 À propos
               </Link>
               <Link
-                href="/contact"
+                href="#formulaire"
                 className="text-white hover:text-[#FFD700] transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
               <div className="flex flex-col gap-2 pt-4 w-full px-4">
-                <Link href="/devis" className="w-full">
+                <Link href="#formulaire" className="w-full">
                   <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
                     Devis en ligne
                   </Button>
                 </Link>
-                <Link href="/contact" className="w-full">
+                <Link href="mailto:aim_services@hotmail.com" className="w-full">
                   <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
                     <Mail className="mr-2 h-4 w-4" /> Contact
                   </Button>

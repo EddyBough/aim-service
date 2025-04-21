@@ -348,7 +348,7 @@ export default function ConditionalForm() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg shadow-lg p-6" id="formulaire">
       <h2 className="text-2xl font-bold mb-2">Formulaire de demande</h2>
       <p className="text-gray-600 mb-6">
         {currentStep === 1
