@@ -34,6 +34,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       className="bg-gradient-to-b from-black to-[#111] text-white py-24 relative overflow-hidden"
+      id="a-propos"
     >
       {/* Arrière-plan décoratif */}
       <div className="absolute inset-0 pointer-events-none">

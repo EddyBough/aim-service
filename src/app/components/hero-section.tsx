@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, ArrowRight, Zap } from "lucide-react";
 import { Button } from "./ui/button";
+import BrandScroller from "./brand-scroller";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -123,7 +124,7 @@ export default function HeroSection() {
               </Button>
             </Link>
             <Link
-              href="/services"
+              href="#nos-services"
               className="flex items-center px-6 py-3 text-[#FFD700] hover:text-white transition-colors"
             >
               Découvrir nos services
@@ -165,7 +166,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Questionnaire Filter avec style modernisé */}
+        <BrandScroller />
         <div
           className={`transition-all duration-1000 ${
             isLoaded ? "opacity-100" : "opacity-0 translate-y-4"

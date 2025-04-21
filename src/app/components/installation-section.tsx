@@ -92,6 +92,7 @@ export default function InstallationsSection() {
     <section
       ref={sectionRef}
       className="relative py-20 overflow-hidden bg-gradient-to-b from-[#111] to-[#111]/90"
+      id="installation-client"
     >
       {/* Arrière-plan décoratif */}
       <div className="absolute inset-0 pointer-events-none">
