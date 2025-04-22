@@ -3,15 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Linkedin } from "lucide-react";
 
 export default function FooterSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -234,20 +226,13 @@ export default function FooterSection() {
             <div className="flex space-x-3 justify-center md:justify-start">
               <a
                 href="#"
-                aria-label="Facebook"
-                className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#FFD700]/20"
-              >
-                <Facebook className="w-4 h-4 text-[#FFD700]" />
-              </a>
-              <a
-                href="#"
                 aria-label="Instagram"
                 className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#FFD700]/20"
               >
                 <Instagram className="w-4 h-4 text-[#FFD700]" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/baptiste-hennecart-1aa5152aa/"
                 aria-label="LinkedIn"
                 className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-[#FFD700]/20"
               >
@@ -338,7 +323,22 @@ export default function FooterSection() {
         <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-[#FFD700]/10 to-transparent blur-sm"></div>
 
         <div className="relative z-10 py-6">
-          <div className="container px-4 mx-auto text-center">
+          <div className="mt-4 flex justify-center gap-6 flex-wrap text-sm text-gray-500">
+            <Link
+              href="/mentions-legales"
+              className="hover:text-[#FFD700] transition-colors"
+            >
+              Mentions légales
+            </Link>
+            <Link
+              href="/politique-de-confidentialite"
+              className="hover:text-[#FFD700] transition-colors"
+            >
+              Politique de confidentialité
+            </Link>
+          </div>
+
+          <div className="container px-4 mt-1 mx-auto text-center">
             <p className="text-sm text-gray-500">
               &copy; {new Date().getFullYear()} AIM Services. Tous droits
               réservés.
