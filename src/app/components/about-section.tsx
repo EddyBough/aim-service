@@ -101,7 +101,7 @@ export default function AboutSection() {
 
             {/* Bloc Engagements & Certifs */}
             <div className="mt-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                 <div>
                   <h3 className="flex items-center text-[#FFD700] font-semibold mb-3">
                     <Shield className="w-4 h-4 mr-2" /> Nos engagements
@@ -137,8 +137,8 @@ export default function AboutSection() {
                 </div>
               </div>
               <p className="mt-4 italic text-center text-white">
-                👉 Besoin d&apos;une expertise ? Contactez-moi pour un devis ou
-                une étude personnalisée.
+                Besoin d&apos;une expertise ? Contactez-moi pour un devis ou une
+                étude personnalisée.
               </p>
             </div>
 
@@ -167,7 +167,7 @@ export default function AboutSection() {
               {/* Logo */}
               <div className="relative h-[250px] sm:h-[300px] md:h-[400px] w-full transform hover:scale-105 transition-transform duration-500">
                 <Image
-                  src="/img/logo-aim-services.svg"
+                  src="/img/new-logo-2-Photoroom.png"
                   alt="Notre équipe"
                   fill
                   className="object-contain p-8"
@@ -185,7 +185,7 @@ export default function AboutSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="relative w-[220px] h-[120px]">
+              <div className="relative w-[220px] h-[120px] xl:ml-12">
                 <Image
                   src="/img/logo-qualifelec.png"
                   alt="Certification Qualifelec IRVE"

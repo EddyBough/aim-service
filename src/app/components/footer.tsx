@@ -57,13 +57,13 @@ export default function FooterSection() {
           </svg>
         </div>
 
-        {/* Lignes diagonales pour plus de dynamisme */}
+        {/* Lignes diagonales  */}
         <div className="absolute top-0 left-0 w-full h-full opacity-15">
           <div className="absolute top-0 left-[30%] w-[1px] h-full bg-gradient-to-b from-transparent via-[#FFD700]/30 to-transparent transform rotate-[20deg] origin-top"></div>
           <div className="absolute top-0 left-[70%] w-[1px] h-full bg-gradient-to-b from-transparent via-[#FFD700]/20 to-transparent transform rotate-[20deg] origin-top"></div>
         </div>
 
-        {/* Cercles avec meilleure visibilité */}
+        {/* Cercles */}
         <div className="footer-shape absolute top-[10%] right-[15%] w-[300px] h-[300px] rounded-full border-2 border-[#FFD700]/20 opacity-40"></div>
         <div className="footer-shape absolute top-[20%] right-[20%] w-[200px] h-[200px] rounded-full border border-[#FFD700]/40 opacity-30"></div>
         <div className="footer-shape absolute bottom-[30%] left-[10%] w-[250px] h-[250px] rounded-full bg-gradient-to-tr from-[#FFD700]/10 to-transparent opacity-30"></div>
@@ -207,14 +207,14 @@ export default function FooterSection() {
           >
             <div className="flex items-center mb-6">
               <Image
-                src="/img/logo-aim-services.svg"
+                src="/img/new-logo-2-Photoroom.png"
                 alt="AIM SERVICES Logo"
                 width={48}
                 height={48}
-                className="object-contain mr-3"
+                className="object-contain mr-3 -mt-1"
               />
               <div className="flex flex-col text-[#FFD700]">
-                <span className="text-xl font-bold">AIM</span>
+                <span className="text-xl font-bold mr-1 xl:mr-0">AIM</span>
                 <span className="text-sm">SERVICES</span>
               </div>
             </div>
