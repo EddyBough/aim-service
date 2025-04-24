@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import BrandScroller from "./brand-scroller";
+import StatCard from "./ui/stat-card";
 
 export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,7 +28,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-gradient-to-br from-black via-black to-[#111] overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-black via-black to-[#111] overflow-hidden -mt-4 xl:-mt-0 md:-mt-0"
     >
       {/* Formes géométriques modernes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -159,10 +160,10 @@ export default function HeroSection() {
 
           {/* Statistiques */}
           <div className="grid w-full grid-cols-2 gap-6 mt-8 md:w-1/2 md:mt-0 md:grid-cols-2">
-            <StatCard number="500" text="Installations réalisées" />
+            <StatCard number="+100" text="Installations réalisées" />
             <StatCard number="100%" text="Clients satisfaits" />
             <StatCard number="24/7" text="Support technique" />
-            <StatCard number="5 ans" text="Garantie sur nos installations" />
+            <StatCard number="3 ans" text="Garantie sur nos installations" />
           </div>
         </div>
 
@@ -178,19 +179,5 @@ export default function HeroSection() {
       {/* Séparateur de section */}
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#FFD700] to-transparent opacity-10"></div>
     </section>
-  );
-}
-
-interface StatCardProps {
-  number: string;
-  text: string;
-}
-
-function StatCard({ number, text }: StatCardProps) {
-  return (
-    <div className="p-6 transition-all bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10">
-      <div className="text-3xl font-bold text-[#FFD700]">{number}</div>
-      <div className="mt-2 text-sm text-gray-300">{text}</div>
-    </div>
   );
 }

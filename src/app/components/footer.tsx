@@ -196,14 +196,14 @@ export default function FooterSection() {
 
       {/* Contenu */}
       <div className="container relative z-10 px-4 py-12 mx-auto">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 text-center md:text-left">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-1 lg:grid-cols-3 text-center md:text-left">
           {/* Colonne 1 : logo et réseaux */}
           <div
             className={`transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
-            } flex flex-col items-center md:items-start`}
+            } flex flex-col items-center lg:items-start`}
           >
             <div className="flex items-center mb-6">
               <Image
@@ -247,14 +247,14 @@ export default function FooterSection() {
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
-            } flex flex-col items-center md:items-start`}
+            } flex flex-col items-center lg:items-start`}
             style={{ transitionDelay: "0.2s" }}
           >
             <h4 className="relative inline-block mb-6 text-lg font-bold text-white">
               Navigation
               <span className="absolute left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-12 h-0.5 -bottom-2 bg-[#FFD700]"></span>
             </h4>
-            <ul className="space-y-3 flex flex-col items-center md:items-start">
+            <ul className="space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
               <FooterLink href="#borne-de-recharge" label="Borne de recharge" />
               <FooterLink href="#nos-services" label="Nos services" />
               <FooterLink
@@ -272,21 +272,21 @@ export default function FooterSection() {
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
-            } flex flex-col items-center md:items-start`}
+            } flex flex-col items-center lg:items-start`}
             style={{ transitionDelay: "0.3s" }}
           >
             <h4 className="relative inline-block mb-6 text-lg font-bold text-white">
               Contact
               <span className="absolute left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0 w-12 h-0.5 -bottom-2 bg-[#FFD700]"></span>
             </h4>
-            <ul className="space-y-4 text-center md:text-left">
-              <li className="flex justify-center md:justify-start items-start">
+            <ul className="space-y-4 text-center">
+              <li className="flex justify-center xl:justify-start lg:justify-start items-center">
                 <MapPin className="w-5 h-5 mr-3 text-[#FFD700]" />
-                <span className="text-gray-300">
+                <span className="text-gray-300 lg:text-left">
                   16, Rue Gaston Berger, 13010 Marseille
                 </span>
               </li>
-              <li className="flex justify-center md:justify-start items-center">
+              <li className="flex justify-center xl:justify-start lg:justify-start items-center">
                 <Phone className="w-5 h-5 mr-3 text-[#FFD700]" />
                 <a
                   href="tel:+33612345678"
@@ -295,7 +295,7 @@ export default function FooterSection() {
                   06 34 42 65 45
                 </a>
               </li>
-              <li className="flex justify-center md:justify-start items-center">
+              <li className="flex justify-center xl:justify-start lg:justify-start items-center">
                 <Mail className="w-5 h-5 mr-3 text-[#FFD700]" />
                 <a
                   href="mailto:aim_service@hotmail.com"
@@ -304,7 +304,7 @@ export default function FooterSection() {
                   aim_service@hotmail.com
                 </a>
               </li>
-              <li className="flex justify-center md:justify-start items-center">
+              <li className="flex justify-center xl:justify-start lg:justify-start items-center">
                 <Clock className="w-5 h-5 mr-3 text-[#FFD700]" />
                 <span className="text-gray-300">Lun-Sam: 8h-18h</span>
               </li>
