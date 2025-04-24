@@ -17,11 +17,11 @@ export default function Navbar() {
           <Link href="/">
             <div className="xl:hidden w-20 h-20 flex-shrink-0">
               <Image
-                src="/img/logo-aim-services.svg"
+                src="/img/new-logo-2-Photoroom.png"
                 alt="Logo AIM"
                 width={75}
                 height={75}
-                className="object-contain"
+                className="object-contain absolute top-[3%]"
               />
             </div>
           </Link>
@@ -38,11 +38,11 @@ export default function Navbar() {
           <Link href="/" className="hidden xl:flex items-center w-[200px]">
             <div className="w-24 h-24 mr-4 flex-shrink-0">
               <Image
-                src="/img/logo-aim-services.svg"
+                src="/img/new-logo-2-Photoroom.png"
                 alt="AIM SERVICES Logo"
                 width={96}
                 height={96}
-                className="object-contain xl:mr-96"
+                className="object-contain xl:mr-96 absolute top-[-4%]"
               />
             </div>
             <div className="flex flex-col">

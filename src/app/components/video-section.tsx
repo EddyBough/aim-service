@@ -35,10 +35,10 @@ export default function ClientVideoSection() {
           <video
             ref={videoRef}
             controls
-            className="w-full h-auto max-h-[700px] object-cover"
-            poster="/video/video-presentation.mp4"
+            className="w-full h-auto max-h-[800px] object-cover xl:scale-[0.95] md:scale-[0.9]"
+            poster="/video/video-demonstration.mp4"
           >
-            <source src="/video/video-presentation.mp4" type="video/mp4" />
+            <source src="/video/video-demonstration.mp4" type="video/mp4" />
             Votre navigateur ne supporte pas la vidéo.
           </video>
 
