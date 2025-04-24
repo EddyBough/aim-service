@@ -104,73 +104,80 @@ export default function Navbar() {
 
           {/* Menu Burger (mobile/tablette) */}
           <button
-            className="xl:hidden text-white"
+            className="xl:hidden text-white transition-transform duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? (
-              <X className="h-12 w-12 mr-3" />
-            ) : (
-              <Menu className="h-12 w-12 text-[#FFD700] mr-3" />
-            )}
+            <div className="transition-transform duration-300 ease-in-out">
+              {isMenuOpen ? (
+                <X className="h-12 w-12 mr-3 rotate-180" />
+              ) : (
+                <Menu className="h-12 w-12 text-[#FFD700] mr-3" />
+              )}
+            </div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="xl:hidden bg-black">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col items-center space-y-4 text-center">
-              <Link
-                href="#nos-services"
-                className="text-white hover:text-[#FFD700] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Nos services
+      {/* Mobile Menu avec animation */}
+      <div
+        className={`xl:hidden bg-black overflow-hidden transition-all duration-500 ease-in-out ${
+          isMenuOpen
+            ? "max-h-[1000px] opacity-100 scale-100"
+            : "max-h-0 opacity-0 scale-95"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-4">
+          <nav className="flex flex-col items-center space-y-4 text-center">
+            <Link
+              href="#nos-services"
+              className="text-white hover:text-[#FFD700] transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Nos services
+            </Link>
+            <Link
+              href="#demo"
+              className="text-white hover:text-[#FFD700] transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Démonstration
+            </Link>
+            <Link
+              href="#installation-client"
+              className="text-white hover:text-[#FFD700] transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Installation client
+            </Link>
+            <Link
+              href="#a-propos"
+              className="text-white hover:text-[#FFD700] transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              À propos
+            </Link>
+            <Link
+              href="#formulaire"
+              className="text-white hover:text-[#FFD700] transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <div className="flex flex-col gap-2 pt-4 w-full px-4">
+              <Link href="#formulaire" className="w-full">
+                <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
+                  Devis en ligne
+                </Button>
               </Link>
-              <Link
-                href="#demo"
-                className="text-white hover:text-[#FFD700] transition-colors"
-              >
-                Démonstration
+              <Link href="mailto:aim_services@hotmail.com" className="w-full">
+                <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
+                  <Mail className="mr-2 h-4 w-4" /> Contact
+                </Button>
               </Link>
-              <Link
-                href="#installation-client"
-                className="text-white hover:text-[#FFD700] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Installation client
-              </Link>
-              <Link
-                href="#a-propos"
-                className="text-white hover:text-[#FFD700] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                À propos
-              </Link>
-              <Link
-                href="#formulaire"
-                className="text-white hover:text-[#FFD700] transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <div className="flex flex-col gap-2 pt-4 w-full px-4">
-                <Link href="#formulaire" className="w-full">
-                  <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
-                    Devis en ligne
-                  </Button>
-                </Link>
-                <Link href="mailto:aim_services@hotmail.com" className="w-full">
-                  <Button className="bg-[#FFD700] hover:bg-[#E6C200] text-black font-bold w-full">
-                    <Mail className="mr-2 h-4 w-4" /> Contact
-                  </Button>
-                </Link>
-              </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }
