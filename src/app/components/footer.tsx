@@ -239,6 +239,27 @@ export default function FooterSection() {
                 <Linkedin className="w-4 h-4 text-[#FFD700]" />
               </a>
             </div>
+            {/* Mention réseau Les Mecs du Bâtiment */}
+            <a
+              href="https://www.lesmecsdubatiment.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Voir le site officiel du réseau Les Mecs du Bâtiment"
+              className="flex items-center justify-center lg:justify-start mb-6 p-3 bg-[#FFD700]/10 rounded-lg border border-[#FFD700]/20 hover:bg-[#FFD700]/15 hover:border-[#FFD700]/30 transition-all duration-300 group"
+            >
+              <div className="relative w-6 h-6 mr-2">
+                <Image
+                  src="/img/les-mecs-du-batiment.svg"
+                  alt="Logo Les Mecs du Bâtiment - Réseau d'artisans certifiés"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xs text-[#FFD700] font-medium group-hover:text-[#FFD700] transition-colors">
+                Membre du réseau{" "}
+                <span className="font-semibold">Les Mecs du Bâtiment</span>
+              </span>
+            </a>
           </div>
 
           {/* Colonne 2 : navigation */}
