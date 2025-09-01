@@ -100,43 +100,71 @@ export default function AboutSection() {
             </div>
 
             {/* Bloc Engagements & Certifs */}
-            <div className="mt-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-              <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+            <div className="mt-8 p-6 bg-gradient-to-br from-white/8 via-white/5 to-black/20 backdrop-blur-sm rounded-xl border border-white/15 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="flex items-center text-[#FFD700] font-semibold mb-3">
+                  <h3 className="flex items-center text-[#FFD700] font-semibold mb-4">
                     <Shield className="w-4 h-4 mr-2" /> Nos engagements
                   </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-2 flex-shrink-0" />
-                      <span className="text-sm">Conseil personnalisé</span>
+                  <ul className="space-y-3">
+                    <li className="flex items-start group">
+                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                        Conseil personnalisé
+                      </span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-2 flex-shrink-0" />
-                      <span className="text-sm">
+                    <li className="flex items-start group">
+                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                         Installation professionnelle et conforme
                       </span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-2 flex-shrink-0" />
-                      <span className="text-sm">
+                    <li className="flex items-start group">
+                      <CheckCircle className="w-4 h-4 text-[#FFD700] mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                         Accompagnement administratif
                       </span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="flex items-center text-[#FFD700] font-semibold mb-3">
+                  <h3 className="flex items-center text-[#FFD700] font-semibold mb-4">
                     <Award className="w-4 h-4 mr-2" /> Marques & clients
                   </h3>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-gray-300 leading-relaxed">
                     Wallbox, Schneider, Hager, ABB, Legrand, BEEV, DAZE,
                     Autel... TotalEnergies, Izivia, IZI by EDF, SNEF, Dalkia,
                     ChargeGuru, WAAT...
                   </p>
                 </div>
               </div>
-              <p className="mt-4 italic text-center text-white">
+
+              {/* Réseau Les Mecs du Bâtiment */}
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src="/img/les-mecs-du-batiment.svg"
+                      alt="Les Mecs du Bâtiment"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-white text-sm">
+                      Membre du réseau{" "}
+                      <span className="text-[#FFD700] font-semibold">
+                        Les Mecs du Bâtiment
+                      </span>
+                    </p>
+                    <p className="text-gray-400 text-xs">
+                      Professionnel certifié et reconnu
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="mt-6 italic text-center text-white text-sm">
                 Besoin d&apos;une expertise ? Contactez-moi pour un devis ou une
                 étude personnalisée.
               </p>
@@ -176,7 +204,7 @@ export default function AboutSection() {
             </div>
 
             {/* Logos certifs */}
-            <div className="flex flex-wrap justify-center items-center gap-20 mt-6">
+            <div className="flex flex-col md:flex-row flex-wrap justify-between md:justify-center items-center gap-16 md:gap-20 mt-6">
               <div className="relative w-[120px] h-[60px]">
                 <Image
                   src="/img/logo-advenir.png"
@@ -185,12 +213,20 @@ export default function AboutSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="relative w-[220px] h-[120px] xl:ml-12">
+              <div className="relative w-[220px] h-[120px]">
                 <Image
                   src="/img/logo-qualifelec.png"
                   alt="Certification Qualifelec IRVE"
                   fill
                   className="object-contain"
+                />
+              </div>
+              <div className="relative w-[120px] h-[100px]">
+                <Image
+                  src="/img/les-mecs-du-batiment.svg"
+                  alt="Les Mecs du Bâtiment"
+                  fill
+                  className="object-contain xl:mt-0 lg:mt-0 md:mt-0 mt-8"
                 />
               </div>
             </div>

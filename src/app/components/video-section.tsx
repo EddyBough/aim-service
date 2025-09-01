@@ -20,7 +20,7 @@ export default function ClientVideoSection() {
   };
 
   return (
-    <section className="py-20 bg-black text-white px-4" id="demo">
+    <section className="py-20 md:py-32 bg-black text-white px-4" id="demo">
       <div className="container mx-auto max-w-4xl text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-4">
           Découvrez <span className="text-[#FFD700]">notre</span> savoir-faire
@@ -35,7 +35,7 @@ export default function ClientVideoSection() {
           <video
             ref={videoRef}
             controls
-            className="w-full h-auto max-h-[800px] object-cover xl:scale-[0.95] md:scale-[0.9]"
+            className="w-full h-auto max-h-[800px] md:max-h-[900px] object-cover xl:scale-[0.95] md:scale-[0.9]"
             poster="/video/video-demonstration.mp4"
           >
             <source src="/video/video-demonstration.mp4" type="video/mp4" />
