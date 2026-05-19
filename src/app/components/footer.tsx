@@ -20,7 +20,7 @@ export default function FooterSection() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionEl) observer.observe(sectionEl);
@@ -322,7 +322,7 @@ export default function FooterSection() {
                   href="mailto:aim_service@hotmail.com"
                   className="text-gray-300 hover:text-white"
                 >
-                  aim_service@hotmail.com
+                  aim_services@hotmail.com
                 </a>
               </li>
               <li className="flex justify-center xl:justify-start lg:justify-start items-center">
